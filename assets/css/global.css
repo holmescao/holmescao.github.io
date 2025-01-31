@@ -1,12 +1,23 @@
 @charset "utf-8";
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     font-weight: 700;
 }
 
@@ -59,3 +70,45 @@ img.lazy {
     font-family: Courier, monospace;
 }
 
+
+.datasets-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dataset-block {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dataset-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.dataset-block h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.dataset-block p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.dataset-block a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.dataset-block a:hover {
+    text-decoration: underline;
+}
