@@ -13,7 +13,7 @@ abstract: >-
   them with motion information to achieve online tracking. 
   
 cover:          assets/images/covers/swarm2021.png
-gif: assets/images/covers/online ants tracking.gif
+gif: assets/images/covers/swarm2021.gif
 authors:
   - Meihong Wu
   - Xiaoyan Cao
