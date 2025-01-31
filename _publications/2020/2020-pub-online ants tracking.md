@@ -9,6 +9,7 @@ abstract: >-
   We introduce an online multi-object tracking framework that combines both the motion and appearance information of ants. We obtain the appearance descriptors by using the ResNet model for offline training on a small (N=50) sample dataset. For online association, a cosine similarity metric computes the matching degree between historical appearance sequences of the trajectory and the current detection.
   
 cover:          assets/images/covers/online ants tracking.png
+gif: assets/images/covers/online ants tracking.gif
 authors:
   - Xiaoyan Cao†
   - Shihui Guo†
