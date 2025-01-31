@@ -1,0 +1,84 @@
+primary_name: "Xiaoyan Cao"
+secondary_name: ""
+navbar_name: "Xiaoyan Cao's Home Page"
+
+positions:
+  - '<span class="no-break"><img src="assets/images/badges/PKU_red.png" alt="Peking University" class="inline-badge"/></span> Ph.D. student Peking University'
+
+email: "caoxiaoyan@stu.pku.edu.cn"
+gscholar: https://scholar.google.com/citations?user=ZYkHM6wAAAAJ&hl=zh-CN
+sscholar: X.-Cao/50322492
+github: holmescao
+twitter: caoxiaoyan7
+wechat_qrcode: assets/images/etc/wechat.jpg
+zhihu: mryan-50
+# resume: assets/cv/Resume_RongshengWang.pdf
+# linkedin: your-linked-in-id
+orcid: 0000-0002-4980-2050
+
+short_bio: >-
+  I am currently a Ph.D. student at Peking University (PKU), under the supervision of <a href="https://scholar.google.com/citations?hl=zh-CN&user=4sRgmaIAAAAJ">Prof. Huapeng Qin</a>. 
+  Additionally, I am a remote visiting student at the University of Edinburgh, working with a Fellow of the Royal Academy of Engineering <a href="https://scholar.google.com/citations?user=2Np3wJ4AAAAJ&hl=zh-CN">Prof. Alistair Borthwick</a>. 
+  Previously, I obtained my M.S. degree from Xiamen University, where I was advised by <a href="https://scholar.google.com/citations?user=yxyC-o0AAAAJ&hl=zh-CN">Prof. Xiaoyu Cao</a>, a recipient of the Excellent Young Scientists Fund (EYSF), 
+  and <a href="https://scholar.google.com/citations?user=RPAVxiAAAAAJ&hl=zh-CN">Prof. Shihui Guo</a>.
+  During my master's studies, I spent a year as an Algorithm Researcher (Intern) at Tencent AI Lab and was rated as an Outstanding Intern,
+  under the joint supervision of Senior Engineer <a href="https://scholar.google.com/citations?user=n8IjgKkAAAAJ&hl=zh-CN">Dr. Lanqing Li</a>
+  and Expert Engineer <a href="https://scholar.google.com/citations?user=y_1aniIAAAAJ&hl=zh-CN">Dr. Dijun Luo</a>. 
+  I have closely collaborated with <a href="https://scholar.google.com/citations?user=hNO0NdEAAAAJ&hl=zh-CN">Dr. Yao Yao</a> from Tsinghua University and <a href="https://scholar.google.com/citations?user=8cnXnOEAAAAJ&hl=zh-CN">Prof. Guangtao Fu</a> from the University of Exeter.
+  <br><br><b>My research mainly focuses on AI for Science, including AI applications in 2D hydrological and hydrodynamic simulations, multi-insect tracking, and greenhouse crop simulations.</b>
+  I am dedicated to exploring how to integrate domain knowledge into AI models, aiming to enhance generalization and produce results that are more aligned with physical laws.
+  Recently, my focus has been on embedding hydrodynamic knowledge (e.g., shallow water equations) into neural networks to enable general flood modeling, including solving, generalization, and knowledge discovery.
+  <br><br>My research has been published in multiple top-tier journals and conferences, such as IEEE Transactions on Image Processing, Pattern Recognition, Journal of Hydrology, AAAI, and ICAPS.
+
+
+show_portrait: true
+portrait_url: assets/images/photos/证件照.jpg
+portrait_caption: >-
+  我是曹小䶮，欢迎访问我的主页~
+
+# education:
+
+# - name: Peking University
+#   logo: assets/images/badges/PKU_red.png
+#   position: M.S. in Computer Science and Technology (AI) # TODO: 改到这里
+#   date: Sep. 2019 - Jul. 2022
+# - name: Xiamen University
+#   logo: assets/images/badges/XMU.png
+#   position: M.S. in Computer Science and Technology (AI) # TODO: 改到这里
+#   date: Sep. 2019 - Jul. 2022
+# - name: Jinan University
+#   logo: assets/images/badges/Jinan_University_Logo.png
+#   position: B.S. in information security
+#   date: Sep. 2015 - Jul. 2019
+  
+experience:
+- name: Tencent AI Lab
+  logo: assets/images/badges/tencent.jpg
+  position: Algorithm Researcher (Intern)
+  date: Mar. 2020 - Mar. 2021
+
+
+# awards:
+# - name: Outstanding Award of JingDong Health - Global AI Innovation Competition
+#   date: 2024
+# - name: First Prize of Baidu PaddlePaddle AGI Hackathon
+#   date: 2024
+# - name: Third Prize of Digital Medical Technology and Application Innovation Competition
+#   date: 2023
+# - name: Third Prize of Baichuan Intelligence and Amazon Cloud AGI Hackathon
+#   date: 2023
+# - name: Silver of Kaggle RSNA Screening Mammography Breast Cancer Detection
+#   date: 2023
+# - name: Outstanding Award of IEEE UV 2022 "Vision Meets Algae" Object Detection Challenge
+#   date: 2022
+# - name: <a href="https://www.paddlepaddle.org.cn/ppdemd?n=/ppdemd/%E7%8E%8B%E8%8D%A3%E8%83%9C">Baidu PaddlePaddle Developers Experts</a>
+#   date: 2021
+
+service:
+- name: Reviewer of IEEE Transactions on Industrial Informatics
+- name: Reviewer of AAAI Conference on Artificial Intelligence
+
+# Feel free to replace the footer text if you would like to, but I will greatly appreciate it 
+# if you keep the link to the template so that more people can benefit from it. Thanks!
+footer_text: >-
+  Copyright © 2025 <a href="https://github.com/holmescao" target="_blank">Xiaoyan Cao</a>. All Rights Reserved.

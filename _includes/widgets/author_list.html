@@ -1,0 +1,50 @@
+{%- assign authors = include.authors -%}
+{%- assign has_eq_contrib = false -%}
+{%- assign has_corresponding = false -%}
+
+{%- for _key in authors -%}
+    {%- assign last_char = _key | slice: -1, 1 -%}
+    
+    {%- assign key = _key -%}
+    {%- assign eq_mark = "" -%}
+    {%- assign corr_mark = "" -%}
+
+    {%- if _key contains "†" -%}
+        {%- assign key = _key | split: "†" | first -%}
+        {%- assign eq_mark = "†" -%}
+        {%- assign has_eq_contrib = true -%}
+    {%- endif -%}
+
+    {%- if _key contains "*" -%}
+        {%- assign key = key | split: "*" | first -%}
+        {%- assign corr_mark = "*" -%}
+        {%- assign has_corresponding = true -%}
+    {%- endif -%}
+
+    {%- assign info = site.data.authors[key] -%}
+
+    {%- if info['name'] -%}
+        {%- assign name = info['name'] -%}
+    {%- else -%}
+        {%- assign name = key -%}
+    {%- endif -%}
+
+    {%- assign display_name = name | append: eq_mark | append: corr_mark -%}
+
+    {%- if info['bold'] == true -%}
+        {%- assign display_name = "<strong>" | append: display_name | append: "</strong>" -%}
+    {%- endif -%}
+    
+    {%- if info['url'] -%}
+        <a class="text-body" target="_blank" href="{{ info['url'] }}">{{ display_name }}</a>{%- if forloop.index < authors.size -%}, {% endif -%}
+    {%- else -%}
+        <span class="text-body">
+            {{ display_name }}{%- if forloop.index < authors.size -%}, {% endif -%}
+        </span>
+    {%- endif -%}
+
+{%- endfor -%}
+
+{%- if has_eq_contrib == true or has_corresponding == true -%}
+     (*<i>corresponding author</i>, †<i>equal contribution<i>)
+{%- endif -%}
