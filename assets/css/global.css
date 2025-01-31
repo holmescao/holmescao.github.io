@@ -70,6 +70,12 @@ img.lazy {
     font-family: Courier, monospace;
 }
 
+.container {
+    width: 70%;
+    /* Limit the width of the page */
+    margin: 0 auto;
+}
+
 .datasets-list {
     display: flex;
     flex-direction: column;
@@ -84,6 +90,7 @@ img.lazy {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .dataset-content {
@@ -94,10 +101,12 @@ img.lazy {
 }
 
 .dataset-image img {
-    width: 200px;
+    width: 180px;
     /* Adjust the size of the image */
     height: auto;
     border-radius: 8px;
+    object-fit: cover;
+    /* Maintain image proportions */
 }
 
 .dataset-text {
