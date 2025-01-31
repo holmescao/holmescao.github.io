@@ -19,6 +19,6 @@ authors:
   - Shihui Guo*
 links:
   Paper: https://ieeexplore.ieee.org/document/10851814
-  Code: https://github.com/holmescao/U-RNN
+  Code: https://github.com/holmescao/TOPICTrack
   Dataset: https://drive.google.com/file/d/1KvqQTZWWhyDsQuEIqQY3XLM_8QlYjDqi/view
 ---
