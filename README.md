@@ -35,4 +35,4 @@ Click [here](https://luost.me/academic-homepage/) to see the preview of the temp
 }
 ```
 
-<a href="https://info.flagcounter.com/U6Yn"><img src="https://s11.flagcounter.com/count2/U6Yn/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+<a href="https://clustrmaps.com/site/1c44l"  title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=YhTx4EkIxQch8R4VQzmN8mSqXqq0gL-02SRDq2q0KGs&cl=ffffff" /></a>
