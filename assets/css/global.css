@@ -71,87 +71,44 @@ img.lazy {
 }
 
 
-/* 控制整体布局的宽度 */
-.container {
-    width: 70%;
-    margin: 0 auto;
-}
-
-/* 数据集列表容器，使用flex布局 */
 .datasets-list {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    /* 增加数据集之间的间隔 */
-}
-
-/* 每个数据集的布局 */
-.dataset-block {
-    display: flex;
-    flex-direction: row;
-    /* 图片和文本横向排列 */
+    flex-wrap: wrap;
     gap: 20px;
+}
+
+.dataset-block {
     background-color: #fff;
-    border-radius: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    /* 增强阴影效果 */
-    align-items: center;
-    /* 图片和文字垂直居中 */
-    width: 100%;
-    /* 每个数据集块占满一整行 */
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* 图片部分 */
-.dataset-image img {
-    width: 180px;
-    /* 图片宽度固定 */
-    height: 120px;
-    /* 设置图片高度，避免图像大小不一致 */
-    object-fit: cover;
-    /* 保持图片比例，避免拉伸 */
-    border-radius: 8px;
-}
-
-/* 文本部分 */
-.dataset-text {
-    flex-grow: 1;
-    text-align: left;
-    /* 文本左对齐 */
+.dataset-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .dataset-block h2 {
-    font-size: 1.6em;
-    margin: 0;
-    font-weight: bold;
-    color: #333;
-    /* 标题颜色更深 */
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 .dataset-block p {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #555;
-    /* 优化描述文字颜色 */
-    line-height: 1.6;
-    /* 增加行高，使文本更易读 */
+    font-size: 1em;
+    margin-bottom: 15px;
 }
 
-/* "Read More" 按钮样式 */
-.view-details {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #6a1b9a;
-    color: white;
+.dataset-block a {
     text-decoration: none;
-    border-radius: 5px;
+    color: #007BFF;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    /* 增加平滑过渡效果 */
 }
 
-/* 悬停效果 */
-.view-details:hover {
-    background-color: #9c4dcc;
+.dataset-block a:hover {
+    text-decoration: underline;
 }
