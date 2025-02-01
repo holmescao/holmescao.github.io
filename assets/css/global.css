@@ -85,12 +85,15 @@ img.lazy {
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
 }
 
-
+/* 图片和卡片边缘的距离 */
 .card-img-top {
     object-fit: cover;
     width: 30%;
     /* 调整图片宽度 */
     height: 180px;
+    margin: 10px;
+    /* 给图片加上左右和顶部的距离 */
+    border-radius: 10px;
 }
 
 .card-body {
@@ -130,10 +133,17 @@ img.lazy {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 2px solid #007bff;
-    /* 悬停时文字颜色变化 */
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
     text-decoration: none;
     /* 取消默认的链接下划线 */
+}
+
+.btn-readmore:hover {
+    color: #0056b3;
+    /* 悬停时改变文字颜色 */
+    transform: translateX(5px);
+    /* 悬停右移 */
 }
 
 .btn-readmore i {
@@ -147,7 +157,6 @@ img.lazy {
     margin-left: 8px;
 }
 
-
 /* 响应式设计：手机端自动堆叠 */
 @media (max-width: 768px) {
     .card {
@@ -159,6 +168,8 @@ img.lazy {
         width: 100%;
         height: 200px;
         object-fit: cover;
+        margin: 0;
+        /* 手机端图片不需要边距 */
     }
 
     .card-body {
