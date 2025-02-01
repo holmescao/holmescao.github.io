@@ -22,14 +22,8 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
 
         <!-- About Section -->
         <section id="about">
-            <h2>About {{ page.title }}</h2>
+            <h2>About</h2>
             <p>{{ page.about }}</p>
-        </section>
-
-        <!-- Download Section -->
-        <section id="download">
-            <h2>Download</h2>
-            <p><a class="download-btn" href="{{ page.download_link }}">Download {{ page.title }}</a></p>
         </section>
 
         <!-- News Section -->
@@ -40,6 +34,12 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
                 <li><a href="{{ news_item.link }}">{{ news_item.title }}</a></li>
                 {% endfor %}
             </ul>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download">
+            <h2>Download</h2>
+            <p><a class="download-btn" href="{{ page.download_link }}">Download</a></p>
         </section>
 
         <!-- References Section -->

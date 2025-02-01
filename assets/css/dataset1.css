@@ -12,7 +12,7 @@ header {
     display: block;
     padding: 10px 0;
     background-color: #f8f9fa;
-    text-align: center;
+    text-align: left;
 }
 
 header .navbar-brand {
@@ -75,7 +75,7 @@ ul li {
     padding: 12px 30px;
     background-color: #007bff;
     color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -96,15 +96,13 @@ ul li {
 
 #dynamic-display img {
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-#dynamic-display img:hover {
-    transform: scale(1.05);
-}
+
 
 /* News section */
 .news-section {
