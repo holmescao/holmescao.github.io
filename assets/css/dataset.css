@@ -19,7 +19,7 @@ header {
 }
 
 header .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #007bff;
     text-decoration: none;
     margin-top: 10px;
@@ -165,7 +165,9 @@ ul li {
     }
 
     .download-btn {
-        padding: 10px 25px;
+        padding: 8px 20px;
+        font-size: 1.2rem;
+        /* 缩小字体 */
     }
 }
 
