@@ -13,11 +13,10 @@ body_attr: data-spy="scroll" data-target="#navbar-year" data-offset="100"
         {% assign dataset_data = dataset.path | split: '/_datasets/' | last | split: '.' | first %}
         {% assign dataset_info = site[dataset_data] %}
         <div class="dataset-block">
-            <img src="{{ site.baseurl }}/assets/images/datasets/{{ dataset_info.image }}"
-                alt="{{ dataset_info.title }}">
+            <img src="assets/images/datasets/{{ dataset_info.image }}" alt="{{ dataset_info.title }}">
             <h2>{{ dataset_info.title }}</h2>
             <p>{{ dataset_info.description }}</p>
-            <a href="{{ site.baseurl }}/datasets/{{ dataset_data }}">Read More</a>
+            <a href="datasets/{{ dataset_data }}">Read More</a>
         </div>
         {% endif %}
         {% endfor %}
