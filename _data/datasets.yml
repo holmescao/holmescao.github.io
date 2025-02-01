@@ -1,9 +1,5 @@
-- name: Dataset 1
+- name: BEE24
   image: assets/images/datasets/BEE24.gif
-  description: "This is a brief description of Dataset 1."
+  description: "BEE24 is a large-scale MOT datasets, includes a total of 36 videos and about 45k annotations. It highlights complex motion patterns, serving as a challenging benchmark for advancing general MOT algorithms research."
   url: /datasets/dataset1
 
-- name: Dataset 2
-  image: assets/images/datasets/BEE24.gif
-  description: "This is a brief description of Dataset 2."
-  url: /datasets/dataset2
