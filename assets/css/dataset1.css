@@ -7,6 +7,23 @@
     /* 或者使用固定高度 */
 }
 
+/* 显示 Header 部分 */
+header {
+    display: block;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+header .navbar-brand {
+    font-size: 1.5rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+header .navbar-brand:hover {
+    color: #0056b3;
+}
 
 /* 页面背景和容器设置 */
 body {
@@ -16,12 +33,6 @@ body {
     padding: 0;
     color: #333;
 }
-
-/* 隐藏 Header */
-header {
-    display: none;
-}
-
 
 /* 页面主体区域 */
 .container {
