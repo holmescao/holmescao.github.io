@@ -90,9 +90,9 @@ img.lazy {
     width: 30%;
     /* 调整图片宽度 */
     height: 180px;
-    margin: 10px;
+    margin: 20px;
     /* 给图片加上上下和左右的距离 */
-    border-radius: 10px;
+    /* border-radius: 20px; */
 }
 
 .card-body {
