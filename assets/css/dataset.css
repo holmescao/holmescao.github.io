@@ -11,7 +11,7 @@
 header {
     max-width: 800px;
     /* 设置最大宽度 */
-    margin: 20px auto;
+    margin: 0px auto;
     /* 自动左右居中，使header与容器对齐 */
     padding: 10px 0;
     background-color: #f8f9fa;
@@ -22,7 +22,7 @@ header .navbar-brand {
     font-size: 1rem;
     color: #007bff;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 5px;
     /* 让 Home 按钮下移 */
 }
 
@@ -43,7 +43,7 @@ body {
 .container {
     max-width: 800px;
     /* 设置最大宽度 */
-    margin: 10px auto;
+    margin: 2px auto;
     /* 上下各留30px，左右自动居中 */
     padding: 30px;
     background-color: #fff;
@@ -63,7 +63,7 @@ h2 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #555;
 }
@@ -161,12 +161,12 @@ ul li {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .download-btn {
         padding: 8px 20px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         /* 缩小字体 */
     }
 }
