@@ -202,7 +202,7 @@ ul li {
     /* 确保允许自动换行 */
     overflow-wrap: break-word !important;
     /* 长单词自动换行 */
-    word-break: break-word;
+    word-break: break-all;
     /* 防止单词溢出 */
     line-height: 1.5;
     /* 行距 */
