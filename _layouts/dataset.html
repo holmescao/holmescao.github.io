@@ -46,11 +46,15 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
         <!-- References Section -->
         <section id="references">
             <h2>References</h2>
-            <ul>
+            <p>If you find this dataset useful, please cite:</p>
+            <div class="reference-container">
+                <pre><code id="reference-text">
                 {% for reference in page.references %}
                 <p>{{ reference.title }}</p>
                 {% endfor %}
-            </ul>
+            </code></pre>
+                <button onclick="copyReference()" class="copy-btn">Copy</button>
+            </div>
         </section>
 
         <!-- Contact Section -->
