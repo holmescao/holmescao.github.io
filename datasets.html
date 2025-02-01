@@ -1,26 +1,20 @@
 ---
-layout: default
 title: Datasets
-navbar_name: Datasets
-body_attr: data-spy="scroll" data-target="#navbar-year" data-offset="100"
+layout: default
 ---
 
-<head>
-    <link rel="stylesheet" href="assets/css/datasets.css"> <!-- Add this line -->
-</head>
-
-<div class="container">
-    <h1>Datasets</h1>
-    <div class="datasets-list">
-        {% for dataset in site.pages %}
-        {% if dataset.path contains '/_datasets/' %}
-        <div class="dataset-block">
-            <img src="{{ site.baseurl }}/assets/images/datasets/{{ dataset.image }}" alt="{{ dataset.title }}">
-            <h2>{{ dataset.title }}</h2>
-            <p>{{ dataset.description }}</p>
-            <a href="{{ site.baseurl }}/datasets/{{ dataset.url | split: " /" | last }}">Read More</a>
+<h1>Datasets</h1>
+<div class="row">
+    {% for dataset in site.data.datasets %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ dataset.image }}" class="card-img-top" alt="{{ dataset.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ dataset.name }}</h5>
+                <p class="card-text">{{ dataset.description }}</p>
+                <a href="{{ dataset.url }}" class="btn btn-primary">Read More</a>
+            </div>
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>

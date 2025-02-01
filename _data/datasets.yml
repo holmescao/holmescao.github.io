@@ -1,0 +1,9 @@
+- name: Dataset 1
+  image: assets/images/datasets/BEE24.gif
+  description: "This is a brief description of Dataset 1."
+  url: /datasets/dataset1
+
+- name: Dataset 2
+  image: assets/images/datasets/BEE24.gif
+  description: "This is a brief description of Dataset 2."
+  url: /datasets/dataset2
