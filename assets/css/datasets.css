@@ -1,0 +1,46 @@
+/* datasets.css */
+.datasets-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.dataset-block {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dataset-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.dataset-block h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.dataset-block p {
+    font-size: 1em;
+    color: #555;
+}
+
+.dataset-block a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dataset-block a:hover {
+    background-color: #0056b3;
+}

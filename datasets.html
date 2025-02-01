@@ -2,21 +2,24 @@
 layout: default
 title: Datasets
 navbar_name: Datasets
-body_attr: >-
-data-spy="scroll" data-target="#navbar-year" data-offset="100"
+body_attr: data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
 
 <div class="container">
     <h1>Datasets</h1>
     <div class="datasets-list">
-        <!-- 在此处添加数据集块 -->
+        {% for dataset in site.static_files %}
+        {% if dataset.path contains '/_datasets/' %}
+        {% assign dataset_data = dataset.path | split: '/_datasets/' | last | split: '.' | first %}
+        {% assign dataset_info = site[dataset_data] %}
         <div class="dataset-block">
-            <img src="assets\images\datasets\BEE24.gif" alt="BEE24">
-            <h2>BEE24</h2>
-            <p>We provide a dataset named BEE24, which highlights complex motion patterns, serving as a challenging
-                benchmark for advancing general MOT algorithms research.</p>
-            <a href="datasets/dataset1.html">Read More</a>
+            <img src="{{ site.baseurl }}/assets/images/datasets/{{ dataset_info.image }}"
+                alt="{{ dataset_info.title }}">
+            <h2>{{ dataset_info.title }}</h2>
+            <p>{{ dataset_info.description }}</p>
+            <a href="{{ site.baseurl }}/datasets/{{ dataset_data }}">Read More</a>
         </div>
-        <!-- 可以根据需要添加更多数据集块 -->
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
