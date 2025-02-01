@@ -48,11 +48,22 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
             <h2>References</h2>
             <div class="reference-list">
                 {% for reference in page.references %}
-                <pre><code>{{ reference.title | replace: ',', ",\n" }}</code></pre>
+                <pre><code>
+                    {{ reference.title
+                    | replace: "author=", "\nauthor="
+                    | replace: "journal=", "\njournal="
+                    | replace: "title=", "\ntitle="
+                    | replace: "year=", "\nyear="
+                    | replace: "volume=", "\nvolume="
+                    | replace: "number=", "\nnumber="
+                    | replace: "pages=", "\npages="
+                    | replace: "keywords=", "\nkeywords="
+                    | replace: "doi=", "\ndoi="
+                    }}
+                </code></pre>
                 {% endfor %}
             </div>
         </section>
-
 
         <!-- Contact Section -->
         <section id="contact">
