@@ -188,21 +188,32 @@ ul li {
 }
 
 
-.reference-container #reference-text {
+.reference-container {
     background-color: #f4f4f4;
+    /* 灰色背景 */
     padding: 10px;
-    border-radius: 5px;
     border: 1px solid #ddd;
+    /* 灰色边框 */
+    border-radius: 5px;
+    max-width: 800px;
+    box-sizing: border-box;
+    /* 包含内边距和边框 */
+}
+
+/* 针对 pre 内部的文本样式 */
+.reference-container pre {
     font-family: monospace;
     white-space: pre-wrap;
     /* 保留空白但允许换行 */
     overflow-wrap: break-word;
     /* 长单词自动换行 */
     line-height: 1.5;
-    max-width: 800px;
-    /* 如不需要水平滚动条，可去掉以下属性 */
     overflow-x: auto;
+    /* 必要时出现水平滚动条 */
+    margin: 0;
+    /* 清除默认的 margin，防止影响整体效果 */
 }
+
 
 
 
