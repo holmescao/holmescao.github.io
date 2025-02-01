@@ -31,7 +31,7 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
             <h2>News</h2>
             <ul class="news-list">
                 {% for news_item in page.news %}
-                <li><a href="{{ news_item.link }}">{{ news_item.title }}</a></li>
+                <li>{{ news_item.title }}</li>
                 {% endfor %}
             </ul>
         </section>
@@ -39,17 +39,18 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
         <!-- Download Section -->
         <section id="download">
             <h2>Download</h2>
+            <p>Please click the button below to download the dataset.</p>
             <p><a class="download-btn" href="{{ page.download_link }}">Download</a></p>
         </section>
 
         <!-- References Section -->
         <section id="references">
             <h2>References</h2>
-            <ul>
+            <div class="reference-list">
                 {% for reference in page.references %}
-                <li><a href="{{ reference.link }}">{{ reference.title }}</a></li>
+                <pre><code>{{ reference.title }}</code></pre>
                 {% endfor %}
-            </ul>
+            </div>
         </section>
 
         <!-- Contact Section -->
