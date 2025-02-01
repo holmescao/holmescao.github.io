@@ -1,0 +1,170 @@
+/* dataset1 页面样式 */
+
+/* 页头样式 */
+header {
+    padding: 120px 0 80px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    header {
+        padding: 140px 0 100px;
+    }
+}
+
+/* 页面内容区域 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* 卡片布局样式 */
+.card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 30%;
+    height: 180px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.card-body {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* "Read More" 按钮样式 */
+.btn-readmore {
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-readmore:hover {
+    color: #0056b3;
+    transform: translateX(5px);
+}
+
+.btn-readmore i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+/* 新闻栏样式 */
+.news-section {
+    margin-top: 3rem;
+}
+
+.news-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news-list li {
+    margin-bottom: 12px;
+}
+
+.news-list li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.news-list li a:hover {
+    color: #0056b3;
+}
+
+/* 图片展示区域 */
+#dynamic-display {
+    text-align: center;
+}
+
+#dynamic-display img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#dynamic-display img:hover {
+    transform: scale(1.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        /* 纵向布局 */
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+
+    .btn-readmore {
+        padding: 8px 15px;
+    }
+}

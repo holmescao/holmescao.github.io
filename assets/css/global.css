@@ -150,7 +150,7 @@ img.lazy {
 }
 
 .card-body .btn-readmore:after {
-    content: " >>";
+    content: ">>";
     /* 添加箭头符号 */
     margin-left: 8px;
 }
