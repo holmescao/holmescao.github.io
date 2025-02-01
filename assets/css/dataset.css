@@ -188,28 +188,20 @@ ul li {
 }
 
 
-.reference-container {
-    position: relative;
+.reference-container #reference-text {
     background-color: #f4f4f4;
-    /* 浅灰色背景 */
     padding: 10px;
     border-radius: 5px;
-    /* 圆角 */
     border: 1px solid #ddd;
     font-family: monospace;
-    /* 等宽字体 */
-    white-space: pre-wrap !important;
-    /* 确保允许自动换行 */
-    overflow-wrap: break-word !important;
+    white-space: pre-wrap;
+    /* 保留空白但允许换行 */
+    overflow-wrap: break-word;
     /* 长单词自动换行 */
-    word-break: break-all;
-    /* 防止单词溢出 */
     line-height: 1.5;
-    /* 行距 */
     max-width: 800px;
-    /* 最大宽度适应父容器 */
+    /* 如不需要水平滚动条，可去掉以下属性 */
     overflow-x: auto;
-    /* 水平滚动条，仅当必要时出现 */
 }
 
 
