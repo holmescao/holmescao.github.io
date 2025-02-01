@@ -1,11 +1,22 @@
 ---
 layout: default
-title: Dataset 1
+title: BEE24
 ---
 
 <head>
     <link rel="stylesheet" href="/assets/css/dataset1.css">
 </head>
+
+<!-- 导航栏 -->
+<div class="section-navbar">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
 
 <header>
     <h1>Dataset 1 - Overview</h1>
@@ -14,24 +25,24 @@ title: Dataset 1
 <section class="container">
     <!-- 动态展示区 -->
     <div id="dynamic-display">
-        <img src="path-to-your-image.gif" alt="Dataset Display">
+        <img src="assets/images/covers/topictrack.gif" alt="Dataset Display">
     </div>
 
     <!-- About Section -->
-    <section>
-        <h2>About Dataset 1</h2>
+    <section id="about">
+        <h2>About</h2>
         <p>This dataset contains detailed annotated data for object detection and tracking. It includes multiple
             sequences captured in various real-world scenarios.</p>
     </section>
 
     <!-- Download Section -->
-    <section>
+    <section id="download">
         <h2>Download</h2>
         <p><a class="download-btn" href="path-to-dataset">Download Dataset 1</a></p>
     </section>
 
     <!-- News Section -->
-    <section class="news-section">
+    <section id="news" class="news-section">
         <h2>News</h2>
         <ul class="news-list">
             <li><a href="#">New dataset update released in 2021.</a></li>
@@ -41,7 +52,7 @@ title: Dataset 1
     </section>
 
     <!-- References Section -->
-    <section>
+    <section id="references">
         <h2>References</h2>
         <ul>
             <li><a href="#">Dataset 1: A Comprehensive Guide</a></li>
@@ -50,7 +61,7 @@ title: Dataset 1
     </section>
 
     <!-- Contact Section -->
-    <section>
+    <section id="contact">
         <h2>Contact</h2>
         <p>If you have any questions or suggestions, please contact us at <a
                 href="mailto:contact@example.com">contact@example.com</a>.</p>
