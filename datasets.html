@@ -8,17 +8,16 @@ body_attr: data-spy="scroll" data-target="#navbar-year" data-offset="100"
 <div class="container">
     <h1>Datasets</h1>
     <div class="datasets-list">
-        {% for dataset in site.static_files %}
+        {% for dataset in site.pages %}
         {% if dataset.path contains '/_datasets/' %}
-        {% assign dataset_data = dataset.path | split: '/_datasets/' | last | split: '.' | first %}
-        {% assign dataset_info = site[dataset_data] %}
         <div class="dataset-block">
-            <img src="assets/images/datasets/{{ dataset_info.image }}" alt="{{ dataset_info.title }}">
-            <h2>{{ dataset_info.title }}</h2>
-            <p>{{ dataset_info.description }}</p>
-            <a href="datasets/{{ dataset_data }}">Read More</a>
+            <img src="/assets/images/datasets/{{ dataset.image }}" alt="{{ dataset.title }}">
+            <h2>{{ dataset.title }}</h2>
+            <p>{{ dataset.description }}</p>
+            <a href="{{ site.baseurl }}/datasets/{{ dataset.url | split: " /" | last }}">Read More</a>
         </div>
         {% endif %}
         {% endfor %}
     </div>
+
 </div>
