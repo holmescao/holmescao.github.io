@@ -6,13 +6,16 @@ layout: default
 <h1>Datasets</h1>
 <div class="row">
     {% for dataset in site.data.datasets %}
-    <div class="col-md-4 mb-4">
+    <div class="col-md-12 mb-4">
         <div class="card">
             <img src="{{ dataset.image }}" class="card-img-top" alt="{{ dataset.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ dataset.name }}</h5>
                 <p class="card-text">{{ dataset.description }}</p>
-                <a href="{{ dataset.url }}" class="btn btn-primary">Read More</a>
+                <div class="card-meta">
+                    <span class="frame">Frame: 120</span> | <span class="run">Run: 23</span>
+                </div>
+                <a href="{{ dataset.url }}" class="btn btn-readmore">Read More</a>
             </div>
         </div>
     </div>
