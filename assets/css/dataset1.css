@@ -3,7 +3,7 @@
 .navbar {
     padding: 0.5rem 1rem;
     /* 控制内边距 */
-    height: 50px;
+    height: 10px;
     /* 或者使用固定高度 */
 }
 
@@ -22,40 +22,6 @@ header {
     display: none;
 }
 
-/* 左侧悬浮导航栏样式 */
-.section-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 220px;
-    height: 100%;
-    background-color: #003366;
-    color: white;
-    padding: 30px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    transition: all 0.3s ease;
-    overflow-y: auto;
-}
-
-.section-navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.section-navbar a:hover {
-    background-color: #007bff;
-}
-
-.section-navbar a.active {
-    background-color: #0056b3;
-}
 
 /* 页面主体区域 */
 .container {
