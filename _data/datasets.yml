@@ -1,5 +1,5 @@
 - name: BEE24
   image: assets\images\covers\topictrack.gif
   description: "BEE24 is a large-scale MOT datasets, includes a total of 36 videos and about 45k annotations. It highlights complex motion patterns, serving as a challenging benchmark for advancing general MOT algorithms research."
-  url: /datasets/dataset1
+  url: /datasets/BEE24
 
