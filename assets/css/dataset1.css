@@ -1,5 +1,13 @@
 /* dataset1 页面样式 */
 
+.navbar {
+    padding: 0.5rem 1rem;
+    /* 控制内边距 */
+    height: 50px;
+    /* 或者使用固定高度 */
+}
+
+
 /* 页面背景和容器设置 */
 body {
     font-family: 'Arial', sans-serif;
