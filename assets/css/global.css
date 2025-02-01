@@ -71,7 +71,6 @@ img.lazy {
 }
 
 
-
 /* 数据集卡片整体布局 */
 .card {
     display: flex;
@@ -92,7 +91,7 @@ img.lazy {
     /* 调整图片宽度 */
     height: 180px;
     margin: 10px;
-    /* 给图片加上左右和顶部的距离 */
+    /* 给图片加上上下和左右的距离 */
     border-radius: 10px;
 }
 
@@ -127,7 +126,6 @@ img.lazy {
 /* "Read More" 按钮 */
 .btn-readmore {
     padding: 10px 20px;
-    border-radius: 30px;
     color: #007bff;
     /* 设置文字颜色 */
     font-weight: bold;
