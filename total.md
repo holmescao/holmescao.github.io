@@ -141,6 +141,186 @@ jobs:
 }
 ```
 
+### assets\css\dataset1.css
+
+```
+/* dataset1 页面样式 */
+
+/* 页面背景和容器设置 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* 隐藏 Header */
+header {
+    display: none;
+}
+
+/* 左侧悬浮导航栏样式 */
+.section-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 30px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+}
+
+.section-navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.section-navbar a:hover {
+    background-color: #007bff;
+}
+
+.section-navbar a.active {
+    background-color: #0056b3;
+}
+
+/* 页面主体区域 */
+.container {
+    margin-left: 240px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 240px);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #003366;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* 下载链接按钮 */
+.download-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* 动态展示图片 */
+#dynamic-display {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#dynamic-display img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#dynamic-display img:hover {
+    transform: scale(1.05);
+}
+
+/* News section */
+.news-section {
+    margin-top: 30px;
+}
+
+.news-list {
+    padding-left: 20px;
+}
+
+.news-list li {
+    margin-bottom: 12px;
+}
+
+.news-list li a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.news-list li a:hover {
+    color: #0056b3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .section-navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .download-btn {
+        padding: 10px 25px;
+    }
+}
+```
+
 ### assets\css\global.css
 
 ```
@@ -214,6 +394,123 @@ img.lazy {
 
 .email-text {
     font-family: Courier, monospace;
+}
+
+
+/* 数据集卡片整体布局 */
+.card {
+    display: flex;
+    flex-direction: row;
+    /* 左右布局 */
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+}
+
+/* 图片和卡片边缘的距离 */
+.card-img-top {
+    object-fit: cover;
+    width: 30%;
+    /* 调整图片宽度 */
+    height: 180px;
+    margin: 20px;
+    /* 给图片加上上下和左右的距离 */
+    /* border-radius: 20px; */
+}
+
+.card-body {
+    flex: 1;
+    /* 右侧内容区域自动填充 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* "Read More" 按钮 */
+.btn-readmore {
+    padding: 10px 20px;
+    color: #007bff;
+    /* 设置文字颜色 */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    /* 取消默认的链接下划线 */
+}
+
+.btn-readmore:hover {
+    color: #0056b3;
+    /* 悬停时改变文字颜色 */
+    transform: translateX(5px);
+    /* 悬停右移 */
+}
+
+.btn-readmore i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.card-body .btn-readmore:after {
+    content: ">>";
+    /* 添加箭头符号 */
+    margin-left: 8px;
+}
+
+/* 响应式设计：手机端自动堆叠 */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        /* 垂直布局 */
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin: 0;
+        /* 手机端图片不需要边距 */
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn-readmore {
+        padding: 8px 15px;
+    }
 }
 ```
 
@@ -720,6 +1017,66 @@ $(function () {
 {"schemaVersion": 1, "label": "citations", "message": "102"}
 ```
 
+### datasets\dataset1.html
+
+```
+---
+layout: default
+title: Dataset 1
+---
+
+<head>
+    <link rel="stylesheet" href="/assets/css/dataset1.css">
+</head>
+
+
+<section class="container">
+    <!-- 动态展示区 -->
+    <div id="dynamic-display">
+        <img src="path-to-your-image.gif" alt="Dataset Display">
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Dataset 1</h2>
+        <p>This dataset contains detailed annotated data for object detection and tracking. It includes multiple
+            sequences captured in various real-world scenarios.</p>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download">
+        <h2>Download</h2>
+        <p><a class="download-btn" href="path-to-dataset">Download Dataset 1</a></p>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <h2>News</h2>
+        <ul class="news-list">
+            <li><a href="#">New dataset update released in 2021.</a></li>
+            <li><a href="#">Image sequences and detection results are now available.</a></li>
+            <li><a href="#">Our dataset was presented at a recent conference.</a></li>
+        </ul>
+    </section>
+
+    <!-- References Section -->
+    <section id="references">
+        <h2>References</h2>
+        <ul>
+            <li><a href="#">Dataset 1: A Comprehensive Guide</a></li>
+            <li><a href="#">Related Research Paper</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or suggestions, please contact us at <a
+                href="mailto:contact@example.com">contact@example.com</a>.</p>
+    </section>
+</section>
+```
+
 ### google_scholar_crawler\main.py
 
 ```
@@ -764,6 +1121,17 @@ scholarly==1.5.1
   bold: true
   url: https://scholar.google.com/citations?hl=zh-CN&user=ZYkHM6wAAAAJ&view_op=list_works&sortby=pubdate
   
+
+```
+
+### _data\datasets.yml
+
+```
+- name: BEE24
+  image: assets/images/datasets/BEE24.gif
+  description: "BEE24 is a large-scale MOT datasets, includes a total of 36 videos and about 45k annotations. It highlights complex motion patterns, serving as a challenging benchmark for advancing general MOT algorithms research."
+  url: /datasets/dataset1
+
 
 ```
 
@@ -1313,85 +1681,102 @@ footer_text: >-
 ```
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title }} - {{ site.data.profile.navbar_name }}</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <!-- ICON -->
-    <link rel="shortcut icon" href="assets/images/etc/bitbug_favicon.ico" />
-    <!-- Quote CSS-->
-    <style>
-        blockquote {
-            font-style: italic;
-            color: #555;
-            border-left: 10px solid #3498db;
-            background: #ecf5fc;
-            padding: 15px 20px;
-            margin: 20px 0;
-            max-width: 920px;
-            width: 100%;
-            position: relative;
-            quotes: "“" "”" "‘" "’";
-        }
-        blockquote:before {
-            color: #3498db;
-            content: open-quote;
-            font-size: 2em;
-            position: absolute;
-            left: 10px;
-            top: 10px;
-        }
-        blockquote:after {
-            color: #3498db;
-            content: close-quote;
-            font-size: 2em;
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-        }
-    </style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ page.title }} - {{ site.data.profile.navbar_name }}</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css"
+    integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg=="
+    crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <!-- ICON -->
+  <link rel="shortcut icon" href="assets/images/etc/bitbug_favicon.ico" />
+  <!-- Quote CSS-->
+  <style>
+    blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 10px solid #3498db;
+      background: #ecf5fc;
+      padding: 15px 20px;
+      margin: 20px 0;
+      max-width: 920px;
+      width: 100%;
+      position: relative;
+      quotes: "“" "”" "‘" "’";
+    }
+
+    blockquote:before {
+      color: #3498db;
+      content: open-quote;
+      font-size: 2em;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    blockquote:after {
+      color: #3498db;
+      content: close-quote;
+      font-size: 2em;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  </style>
 </head>
 
 <body class="bg-light" {{ page.body_attr }}>
-    {% include navbar.html %}
-    <div class="container">
-        {{content}}
-    </div>
-    {% include footer.html %}
+  {% include navbar.html %}
+  <div class="container">
+    {{content}}
+  </div>
+  {% include footer.html %}
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="assets/js/common.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+    integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js"
+    integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA=="
+    crossorigin="anonymous"></script>
+  <script src="assets/js/common.js"></script>
 
-    <!-- Coze -->
-    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.6/libs/cn/index.js"></script>
-    <script>
-      new CozeWebSDK.WebChatClient({
-        config: {
-          bot_id: '7417394284674301961',
-        },
-        componentProps: {
-          title: 'Coze',
-        },
-      });
-    </script>
+  <!-- Coze -->
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.6/libs/cn/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7417394284674301961',
+      },
+      componentProps: {
+        title: 'Coze',
+      },
+    });
+  </script>
 </body>
-</html>
 
+</html>
 ```
 
 ### _layouts\prompt.html
