@@ -187,20 +187,29 @@ ul li {
     /* 增加行距 */
 }
 
-/* 代码块容器 */
+
 .reference-container {
     position: relative;
     background-color: #f4f4f4;
+    /* 设置浅灰色背景 */
     padding: 10px;
     border-radius: 5px;
+    /* 添加圆角 */
     border: 1px solid #ddd;
     font-family: monospace;
+    /* 使用等宽字体 */
     white-space: pre-wrap;
     /* 允许自动换行 */
     line-height: 1.5;
+    /* 增加行间距 */
     overflow-x: auto;
-    /* 允许横向滚动，防止超长内容换行 */
+    /* 添加水平滚动条以防内容超宽 */
+    max-width: 100%;
+    /* 设置最大宽度 */
+    word-wrap: break-word;
+    /* 防止长单词溢出 */
 }
+
 
 /* 复制按钮 */
 .copy-btn {
