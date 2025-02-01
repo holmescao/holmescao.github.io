@@ -125,20 +125,21 @@ img.lazy {
 .btn-readmore {
     padding: 10px 20px;
     border-radius: 30px;
-    background-color: #007bff;
-    color: white;
+    color: #007bff;
+    /* 设置文字颜色 */
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: none;
+    border: 2px solid #007bff;
+    /* 给按钮加边框 */
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* 悬停时文字颜色变化 */
     text-decoration: none;
     /* 取消默认的链接下划线 */
 }
-
 
 .btn-readmore i {
     margin-left: 8px;
@@ -146,10 +147,11 @@ img.lazy {
 }
 
 .card-body .btn-readmore:after {
-    content: ">>";
+    content: " >>";
     /* 添加箭头符号 */
     margin-left: 8px;
 }
+
 
 /* 响应式设计：手机端自动堆叠 */
 @media (max-width: 768px) {
