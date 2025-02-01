@@ -187,7 +187,7 @@ ul li {
     /* 增加行距 */
 }
 
-/* 引用部分的样式 */
+/* 代码块容器 */
 .reference-container {
     position: relative;
     background-color: #f4f4f4;
@@ -196,10 +196,13 @@ ul li {
     border: 1px solid #ddd;
     font-family: monospace;
     white-space: pre-wrap;
+    /* 允许自动换行 */
     line-height: 1.5;
+    overflow-x: auto;
+    /* 允许横向滚动，防止超长内容换行 */
 }
 
-/* 复制按钮样式 */
+/* 复制按钮 */
 .copy-btn {
     position: absolute;
     top: 10px;
