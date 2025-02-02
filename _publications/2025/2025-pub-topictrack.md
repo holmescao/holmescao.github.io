@@ -2,7 +2,7 @@
 title:          "TOPIC: a parallel association paradigm for multi-object tracking under complex motions and diverse scenes"
 date:           2025-02-02 00:01:00 +0800
 selected:       true
-pub:            "IEEE Transactions on Image Processing (IEEE TIP 2025)"
+pub:            "IEEE Transactions on Image Processing (IEEE TIP)"
 pub_last:       ' <span class="badge badge-pill badge-custom badge-danger">SCI Q1</span>'
 pub_date:       "2025"
 abstract: >-
