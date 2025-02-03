@@ -3,16 +3,22 @@ title: Datasets
 layout: default
 ---
 
-
 <h1>Datasets</h1>
 <div class="row">
     {% for dataset in site.data.datasets %}
     <div class="col-md-12 mb-4">
-        <div class="card">
+        <!-- 添加 data-dataset 属性，值为数据集名称 -->
+        <div class="card" data-dataset="{{ dataset.name }}">
             <img src="{{ dataset.image }}" class="card-img-top" alt="{{ dataset.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ dataset.name }}</h5>
                 <p class="card-text">{{ dataset.description }}</p>
+                <!-- 新增：显示 CountAPI 计数 -->
+                <div class="card-meta">
+                    <span class="view-count">Views: <span class="views-count">0</span></span>
+                    <span class="download-count" style="margin-left: 20px;">Downloads: <span
+                            class="downloads-count">0</span></span>
+                </div>
                 <a href="{{ dataset.url }}" class="btn-readmore">Read More</a>
             </div>
         </div>

@@ -20,6 +20,15 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
             <img src="{{ site.baseurl }}/{{ page.image }}" alt="Dataset Display">
         </div>
 
+        <!-- 新增：统计信息区域 -->
+        <section id="stats" style="margin-bottom: 20px; text-align: center;">
+            <div class="stats">
+                <span>Views: <span id="view-count">0</span></span>
+                <span style="margin-left: 20px;">Downloads: <span id="download-count">0</span></span>
+            </div>
+        </section>
+
+
         <!-- About Section -->
         <section id="about">
             <h2>About</h2>
@@ -40,8 +49,11 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
         <section id="download">
             <h2>Download</h2>
             <p>Please click the button below to download the dataset.</p>
-            <p><a class="download-btn" href="{{ page.download_link }}">Download</a></p>
+            <!-- 在下载按钮上增加 onclick 事件 -->
+            <p><a class="download-btn" href="{{ page.download_link }}" onclick="increaseDownloadCount()">Download</a>
+            </p>
         </section>
+
 
         <!-- References Section -->
         <section id="references">
@@ -89,4 +101,7 @@ title: {{ page.title }} - {{ site.data.profile.navbar_name }}
             });
         }
     </script>
+    <!-- 引入必要的 JS 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/common.js"></script>
 </body>
