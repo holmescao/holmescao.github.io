@@ -21,8 +21,9 @@ const NAMESPACE = "holmescao";
 // 调用 CountAPI 的 hit 接口，增加浏览量并更新页面显示
 function updatePageViews() {
     // 当前页面的标题格式假定为 "BEE24 - XXX"，取第一个部分作为数据集名称
-    var pageName = document.title.split(" - ")[0];
-    var url = `https://api.countapi.xyz/hit/${NAMESPACE}/${pageName}-views`;
+    // var pageName = document.title.split(" - ")[0];
+    var pageName = document.title;
+    var url = `https://api.countapi.xyz/hit/${NAMESPACE}/${pageName}views`;
 
     fetch(url)
         .then(response => response.json())
@@ -37,8 +38,9 @@ function updatePageViews() {
 // 针对数据集详情页的下载量统计：
 // 当用户点击下载按钮时调用此函数，增加下载量并更新页面显示
 function increaseDownloadCount() {
-    var pageName = document.title.split(" - ")[0];
-    var url = `https://api.countapi.xyz/hit/${NAMESPACE}/${pageName}-downloads`;
+    // var pageName = document.title.split(" - ")[0];
+    var pageName = document.title;
+    var url = `https://api.countapi.xyz/hit/${NAMESPACE}/${pageName}downloads`;
 
     fetch(url)
         .then(response => response.json())
@@ -58,7 +60,7 @@ function updateDatasetCards() {
         var datasetName = $(this).data("dataset");
 
         // 更新浏览量
-        var viewsUrl = `https://api.countapi.xyz/get/${NAMESPACE}/${datasetName}-views`;
+        var viewsUrl = `https://api.countapi.xyz/get/${NAMESPACE}/${datasetName}views`;
         fetch(viewsUrl)
             .then(response => response.json())
             .then(data => {
@@ -67,7 +69,7 @@ function updateDatasetCards() {
             .catch(err => console.error("Error fetching views for", datasetName, err));
 
         // 更新下载量
-        var downloadsUrl = `https://api.countapi.xyz/get/${NAMESPACE}/${datasetName}-downloads`;
+        var downloadsUrl = `https://api.countapi.xyz/get/${NAMESPACE}/${datasetName}downloads`;
         fetch(downloadsUrl)
             .then(response => response.json())
             .then(data => {
