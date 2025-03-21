@@ -1,12 +1,12 @@
 ---
 title:          U-RNN high-resolution spatiotemporal nowcasting of urban flooding
-date:           2024-08-23 00:01:00 +0800
+date:           2025-03-15 00:01:00 +0800
 selected:       true
-pub:            "SSRN"
-pub_last:       ' <span class="badge badge-pill badge-custom badge-secondary">Preprint</span>'
-pub_date:       "2024"
+pub:            "Journal of Hydrology (JoH)"
+pub_last:       ' <span class="badge badge-pill badge-custom badge-danger">SCI Q1</span>'
+pub_date:       "2025"
 abstract: >-
-  We propose a novel U-like Recurrent Neural Network (U-RNN) 
+  We propose U-like Recurrent Neural Network (U-RNN), a latent autoregressive architecture,
   to represent the spatiotemporal dynamic process of urban flooding,
   and a Sliding Window-based Pre-warming (SWP) training paradigm to reduce computational demand
   and enhance the generalization of full sequence predictions.
@@ -14,8 +14,8 @@ abstract: >-
 cover: assets/images/covers/urnn.png
 gif:  assets/images/covers/urnn.gif
 authors:
-  - Xiaoyan Cao†
-  - Baoying Wang†
+  - Xiaoyan Cao
+  - Baoying Wang
   - Yao Yao
   - Lin Zhang
   - Yanwen Xing
