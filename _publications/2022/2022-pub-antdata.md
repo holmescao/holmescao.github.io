@@ -1,3 +1,4 @@
+---
 title:          "A dataset of ant colonies’ motion trajectories in indoor and outdoor scenes to study clustering behavior"
 date:           2022-11-01 00:01:00 +0800
 selected:       true
@@ -23,3 +24,4 @@ links:
   Paper: https://ojs.aaai.org/index.php/AAAI/article/view/21440/21189
   Code: https://github.com/holmescao/ANTS_marking_and_analysis_tools
   Dataset: https://data.mendeley.com/datasets/9ws98g4npw/3
+---
