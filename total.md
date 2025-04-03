@@ -1241,6 +1241,7 @@ experience:
 service:
 - name: Reviewer of IEEE Transactions on Industrial Informatics
 - name: Reviewer of AAAI Conference on Artificial Intelligence
+- name: Reviewer of Smart Agriculture Technology
 
 # Feel free to replace the footer text if you would like to, but I will greatly appreciate it 
 # if you keep the link to the template so that more people can benefit from it. Thanks!
