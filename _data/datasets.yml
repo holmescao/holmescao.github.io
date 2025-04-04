@@ -1,5 +1,5 @@
 - name: urbanflood24
-  image: assets\images\covers\urnn-Catchments.gifurnn-Catchments
+  image: assets\images\covers\urnn-Catchments.gif
   description: "urbanflood24 is a large-scale spatiotemporal dynamic simulation of rainfall-induced urban flooding. A total of 56 rainfall events, including 20 measured rainfall events and 36 design rainfall events, are used to assess urban flooding induced by various rainfall conditions."
   url: /datasets/urbanflood24
 
