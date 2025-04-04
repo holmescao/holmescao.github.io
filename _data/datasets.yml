@@ -1,9 +1,9 @@
+- name: urbanflood24
+  image: assets\images\covers\urnn-Catchments.gifurnn-Catchments
+  description: "urbanflood24 is a large-scale spatiotemporal dynamic simulation of rainfall-induced urban flooding. A total of 56 rainfall events, including 20 measured rainfall events and 36 design rainfall events, are used to assess urban flooding induced by various rainfall conditions."
+  url: /datasets/urbanflood24
+
 - name: BEE24
   image: assets\images\covers\topictrack.gif
   description: "BEE24 is a large-scale MOT datasets, includes a total of 36 videos and about 45k annotations. It highlights complex motion patterns, serving as a challenging benchmark for advancing general MOT algorithms research."
   url: /datasets/BEE24
-
-- name: urbanflood24
-  image: assets\images\covers\urnn-Catchments.mp4
-  description: "urbanflood24 is a large-scale spatiotemporal dynamic simulation of rainfall-induced urban flooding. A total of 56 rainfall events, including 20 measured rainfall events and 36 design rainfall events, are used to assess urban flooding induced by various rainfall conditions."
-  url: /datasets/urbanflood24
