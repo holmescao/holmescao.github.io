@@ -27,5 +27,5 @@ authors:
 links:
   Paper: https://doi.org/10.1016/j.jhydrol.2025.133117
   Code: https://github.com/holmescao/U-RNN
-  Dataset:
+  Dataset: https://holmescao.github.io/datasets/urbanflood24
 ---
