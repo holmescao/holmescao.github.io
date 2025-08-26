@@ -34,7 +34,7 @@ authors:
   - Lian Feng
   - Huapeng Qin*
 links:
-  Paper: None
+  Paper: 10.1109/TGRS.2025.3601628
   Code: https://github.com/holmescao/GR-Net
   Dataset: https://github.com/holmescao/GR-Net
 ---
