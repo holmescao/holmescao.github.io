@@ -1,62 +1,77 @@
 ---
-layout: dataset
+layout: dataset_larno
 title: LarNO
 image: assets/images/covers/larno2026region.jpg
-about: "This dataset is the official benchmark for LarNO, a memory-efficient,
+image2: assets/images/covers/larno2026ukeatest8a.png
+about: "This dataset is the official benchmark for <b>LarNO</b>, a memory-efficient,
 discretization-invariant neural operator for real-time urban flood prediction.
 LarNO learns the spatiotemporal mapping from dynamic rainfall and static terrain
-inputs to water depth distributions, and supports zero-shot generalization to
+inputs to water depth distributions, and supports <b>zero-shot generalization</b> to
 spatial resolutions unseen during training.
 <br><br>
 The dataset comprises two urban flood benchmark cases:
-<br>
-<b>(1) Futian case (region1_20m)</b>: A large-scale benchmark covering the Futian
+<br><br>
+<b>(1) Futian case (region1_20m)</b> — A large-scale benchmark covering the Futian
 District of Shenzhen, China (~100 km²). 80 observed extreme rainfall events
 (2008–2018, return periods 0.1–20 years) were simulated using MIKE Plus 2023
 with a 1D–2D coupled scheme. Released at 20 m spatial resolution (400×560 grid),
 72 time steps per event at 5-minute intervals. 64 events for training, 16 for testing.
-<br>
-<b>(2) UKEA case (ukea_8m_5min / ukea_2m_5min)</b>: A small coastal urban catchment
-(~0.4 km²) from a UK Environment Agency study site, used for transfer learning
-(fine-tuning from Futian pre-trained weights) and zero-shot super-resolution
-(train at 8 m, test at 2 m without retraining). 20 events in total, 16 for training, 4 for testing.
-<br>
-<img src='/assets/images/covers/larno2026ukeatest8a.jpg' alt='UKEA 8m test results' style='max-width:100%;margin-top:10px;border-radius:6px;'>
 <br><br>
-Each event is stored as a separate sub-folder containing <code>rainfall.npy</code>
-(shape T×H×W, mm/5min) and <code>h.npy</code> (shape T×H×W, metres water depth).
-Shared terrain data (<code>dem.npy</code>, shape H×W) is provided per location.
-The model takes 13 input channels: 6 past rainfall fields, 6 cumulative-rainfall
-fields, and the DEM.
+<b>(2) UKEA case (ukea_8m_5min / ukea_2m_5min)</b> — A small coastal urban catchment
+(~0.4 km²) from a UK Environment Agency study site, used for <b>transfer learning</b>
+(fine-tuning from Futian pre-trained weights) and <b>zero-shot super-resolution</b>
+(train at 8 m, test at 2 m without any retraining). 20 events total; 16 for training,
+4 for testing.
+<br><br>
+Each event is stored as a sub-folder containing <code>rainfall.npy</code> (T×H×W, mm/5 min)
+and <code>h.npy</code> (T×H×W, metres water depth). Shared terrain data
+(<code>dem.npy</code>, H×W) is provided per location. The model takes 13 input channels:
+6 past rainfall fields, 6 cumulative-rainfall fields, and the DEM.
 <br><br>
 Three training configurations are provided in the codebase:
 <code>ukea_finetune.yaml</code>, <code>ukea_scratch.yaml</code>, and
-<code>region1_scratch.yaml</code>. Full instructions are available in the
-<a href='https://github.com/holmescao/LarNO'>GitHub repository</a>."
+<code>region1_scratch.yaml</code>. Full instructions are in the
+<a href='https://github.com/holmescao/LarNO' style='color:#0077cc;font-weight:bold;'>GitHub repository</a>."
 
-download_link: https://doi.org/10.6084/m9.figshare.30529031
+downloads:
+- label: "Baidu Cloud"
+  note: "password: LaNO"
+  url: "https://pan.baidu.com/s/16CnEulG3X4LVgSAMjPvVyg?pwd=LaNO"
+  icon: "fas fa-cloud-download-alt"
+  style: "baidu"
+- label: "Google Drive"
+  note: "no password"
+  url: "https://drive.google.com/file/d/1bw97nT9kA1qM8lCuzhzSU3X1KBkJ_Kdw/view?usp=drive_link"
+  icon: "fab fa-google-drive"
+  style: "google"
+- label: "figshare"
+  note: "no password"
+  url: "https://figshare.com/articles/dataset/Benchmark_dataset_of_Large-scale_urban_flood_modeling_and_zero-shot_high-resolution_generalization_with_LarNO_/30529031"
+  icon: "ai ai-figshare"
+  style: "fig"
+
 news:
-- title: (2025.12) We have released the LarNO benchmark dataset on figshare!
+- title: (2025.12) We have released the LarNO benchmark dataset on figshare, Google Drive, and Baidu Cloud!
 
 references:
-- title: "<p>@article{larno2025,
-    title   = {Large-scale urban flood modeling and zero-shot high-resolution
-               generalization with LarNO},
-    author  = {[TODO: authors]},
-    journal = {[TODO: journal]},
-    year    = {2025},
-    doi     = {[TODO: DOI]}
-  }</p>
-  <p>
-  @misc{larno2025dataset,
-    author    = {Cao, Xiaoyan and others},
-    title     = {LarNO Urban Flood Benchmark Dataset},
-    year      = {2025},
-    publisher = {figshare},
-    note      = {Dataset},
-    doi       = {10.6084/m9.figshare.30529031}
-  }
-  </p>
-"
+- title: "@article{larno2025,
+  title   = {Large-scale urban flood modeling and zero-shot high-resolution
+             generalization with LarNO},
+  author  = {[TODO: authors]},
+  journal = {[TODO: journal]},
+  year    = {2025},
+  doi     = {[TODO: DOI]}
+}
+
+@misc{larno2025dataset,
+  author    = {Cao, Xiaoyan and others},
+  title     = {Benchmark dataset of Large-scale urban flood modeling and
+               zero-shot high-resolution generalization with LarNO},
+  year      = {2025},
+  publisher = {figshare},
+  note      = {Dataset},
+  doi       = {10.6084/m9.figshare.30529031}
+}"
+
 contact_email: caoxiaoyan@stu.pku.edu.cn
 ---

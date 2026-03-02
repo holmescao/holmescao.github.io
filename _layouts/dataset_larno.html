@@ -1,0 +1,351 @@
+---
+layout: default
+title: {{ page.title }} - {{ site.data.profile.navbar_name }}
+---
+
+<style>
+/* ── LarNO dataset page styles ── */
+.larno-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  font-family: 'Lato', Arial, sans-serif;
+  color: #333;
+}
+
+/* back link */
+.larno-back {
+  display: inline-block;
+  margin: 18px 0 14px;
+  font-size: 0.9rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+.larno-back:hover { color: #005599; }
+
+/* hero images – side by side */
+.larno-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.larno-hero figure {
+  margin: 0;
+  text-align: center;
+}
+.larno-hero figure img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  display: block;
+}
+.larno-hero figure figcaption {
+  font-size: 0.78rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* title block */
+.larno-title-block {
+  margin-bottom: 32px;
+}
+.larno-title-block h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #003366;
+  margin: 0 0 8px;
+}
+.larno-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.larno-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.badge-blue  { background: #dbeafe; color: #1d4ed8; }
+.badge-green { background: #d1fae5; color: #065f46; }
+.badge-amber { background: #fef3c7; color: #92400e; }
+
+/* stat strip */
+.larno-stats {
+  display: flex;
+  gap: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 36px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.larno-stat {
+  flex: 1;
+  text-align: center;
+  padding: 14px 8px;
+  border-right: 1px solid #e2e8f0;
+}
+.larno-stat:last-child { border-right: none; }
+.larno-stat-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #003366;
+  display: block;
+}
+.larno-stat-lbl {
+  font-size: 0.72rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* section cards */
+.larno-section {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-left: 4px solid #003366;
+  border-radius: 0 8px 8px 0;
+  padding: 24px 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.larno-section h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+  font-style: normal;
+}
+.larno-section p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+/* news list */
+.larno-news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.larno-news-list li {
+  font-size: 0.9rem;
+  color: #444;
+  padding: 6px 0 6px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  line-height: 1.5;
+}
+.larno-news-list li:last-child { border-bottom: none; }
+.larno-news-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #0077cc;
+  font-size: 0.8rem;
+  top: 7px;
+}
+
+/* download buttons */
+.larno-dl-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.larno-dl-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  min-width: 190px;
+}
+.larno-dl-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.18);
+  text-decoration: none;
+}
+.larno-dl-btn .dl-icon { font-size: 1.2rem; }
+.larno-dl-btn .dl-text { display: flex; flex-direction: column; }
+.larno-dl-btn .dl-label { font-size: 0.88rem; font-weight: 700; }
+.larno-dl-btn .dl-note  { font-size: 0.72rem; font-weight: 400; opacity: 0.85; }
+
+.btn-baidu  { background: #2932e1; color: #fff; }
+.btn-google { background: #4285f4; color: #fff; }
+.btn-fig    { background: #c0392b; color: #fff; }
+
+/* reference box */
+.larno-ref-box {
+  background: #f8fafc;
+  border: 1px solid #dde3ea;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  color: #333;
+  position: relative;
+}
+.larno-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.larno-copy-btn:hover { background: #005599; }
+
+/* responsive */
+@media (max-width: 640px) {
+  .larno-hero { grid-template-columns: 1fr; }
+  .larno-stats { flex-wrap: wrap; }
+  .larno-stat { flex: 0 0 50%; border-bottom: 1px solid #e2e8f0; }
+  .larno-dl-grid { flex-direction: column; }
+  .larno-dl-btn { min-width: unset; }
+}
+</style>
+
+<div class="larno-wrap">
+
+  <!-- back -->
+  <a class="larno-back" href="{{ site.baseurl }}/datasets">← Back to Datasets</a>
+
+  <!-- hero images -->
+  <div class="larno-hero">
+    <figure>
+      <img src="{{ site.baseurl }}/{{ page.image }}" alt="Futian region results">
+      <figcaption>Case 1 · Futian District, Shenzhen (region1_20m)</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ site.baseurl }}/{{ page.image2 }}" alt="UKEA 8m test results">
+      <figcaption>Case 2 · UKEA catchment (ukea_8m_5min) – zero-shot test</figcaption>
+    </figure>
+  </div>
+
+  <!-- title & badges -->
+  <div class="larno-title-block">
+    <h1>{{ page.title }} Dataset</h1>
+    <div class="larno-badges">
+      <span class="larno-badge badge-blue">Urban Flood</span>
+      <span class="larno-badge badge-green">Neural Operator</span>
+      <span class="larno-badge badge-amber">Zero-shot Super-resolution</span>
+      <span class="larno-badge badge-blue">Transfer Learning</span>
+    </div>
+  </div>
+
+  <!-- stat strip -->
+  <div class="larno-stats">
+    <div class="larno-stat">
+      <span class="larno-stat-val">2</span>
+      <span class="larno-stat-lbl">Benchmark Cases</span>
+    </div>
+    <div class="larno-stat">
+      <span class="larno-stat-val">100</span>
+      <span class="larno-stat-lbl">Total Events</span>
+    </div>
+    <div class="larno-stat">
+      <span class="larno-stat-val">72</span>
+      <span class="larno-stat-lbl">Time Steps / Event</span>
+    </div>
+    <div class="larno-stat">
+      <span class="larno-stat-val">4×</span>
+      <span class="larno-stat-lbl">Zero-shot Super-res</span>
+    </div>
+    <div class="larno-stat">
+      <span class="larno-stat-val">13</span>
+      <span class="larno-stat-lbl">Input Channels</span>
+    </div>
+  </div>
+
+  <!-- about -->
+  <div class="larno-section">
+    <h2>About</h2>
+    <p>{{ page.about }}</p>
+  </div>
+
+  <!-- news -->
+  <div class="larno-section">
+    <h2>News</h2>
+    <ul class="larno-news-list">
+      {% for item in page.news %}
+      <li>{{ item.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- download -->
+  <div class="larno-section">
+    <h2>Download</h2>
+    <p style="margin-bottom:18px;">The dataset is publicly available from the following sources. All versions are identical in content.</p>
+    <div class="larno-dl-grid">
+      {% for dl in page.downloads %}
+      <a class="larno-dl-btn btn-{{ dl.style }}" href="{{ dl.url }}" target="_blank" rel="noopener">
+        <span class="dl-icon"><i class="{{ dl.icon }}"></i></span>
+        <span class="dl-text">
+          <span class="dl-label">{{ dl.label }}</span>
+          {% if dl.note %}<span class="dl-note">{{ dl.note }}</span>{% endif %}
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- references -->
+  <div class="larno-section">
+    <h2>References</h2>
+    <p style="margin-bottom:14px;">If you find this dataset useful, please cite:</p>
+    <div style="position:relative;">
+      <pre class="larno-ref-box" id="larno-ref">{% for ref in page.references %}{{ ref.title }}{% endfor %}</pre>
+      <button class="larno-copy-btn" onclick="copyLarnoRef()">Copy</button>
+    </div>
+  </div>
+
+  <!-- contact -->
+  <div class="larno-section">
+    <h2>Contact</h2>
+    <p>For questions or suggestions, contact us at
+      <a href="mailto:{{ page.contact_email }}" style="color:#0077cc;">{{ page.contact_email }}</a>.
+    </p>
+  </div>
+
+  <!-- visitor map -->
+  <div style="text-align:center;margin-top:20px;">
+    <script type="text/javascript" id="clustrmaps"
+      src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=tt&d=FJONs47AfdvEuJea3kQw6TBMa7ASEShpVrCshJ1ldq8"></script>
+  </div>
+
+</div>
+
+<script>
+function copyLarnoRef() {
+  var text = document.getElementById("larno-ref").innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.querySelector(".larno-copy-btn");
+    btn.textContent = "Copied!";
+    setTimeout(function(){ btn.textContent = "Copy"; }, 2000);
+  });
+}
+</script>
