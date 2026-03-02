@@ -1,16 +1,44 @@
 ---
-layout: dataset
+layout: dataset_larno
 title: BEE24
 image: assets/images/covers/topictrack.gif
-about: "BEE24 includes a total of 36 videos and 446,908 annotations. BEE24 challenges models to track multiple
-similar-appearing small objects with complex motions over long periods. It serves as a testbed for MOT research in more
-complex and diverse real-world scenes, significantly contributing to tracking general objects, including pedestrians,
-vehicles, drones, animals, insects, etc.
-The leaderboard of existing trackers, as well as training and testing sequences, can be found in the <a
-    href='https://github.com/holmescao/TOPICTrack'>code repository</a> and the <a
-    href='https://ieeexplore.ieee.org/document/10851814'>paper</a>."
+image_caption: "Multi-object tracking · complex motions & diverse scenes"
 
-download_link: https://drive.google.com/file/d/1KvqQTZWWhyDsQuEIqQY3XLM_8QlYjDqi/view
+badges:
+- {label: "Multi-Object Tracking", style: "blue"}
+- {label: "MOT Benchmark",         style: "green"}
+- {label: "IEEE TIP 2025",         style: "amber"}
+- {label: "Small Objects",         style: "purple"}
+
+stats:
+- {val: "36",   lbl: "Videos"}
+- {val: "446K", lbl: "Annotations"}
+- {val: "8+",   lbl: "Object Types"}
+- {val: "TIP",  lbl: "Published In"}
+
+about: "BEE24 includes a total of 36 videos and 446,908 annotations.
+BEE24 challenges models to track multiple similar-appearing small objects with
+complex motions over long periods.
+It serves as a testbed for MOT research in more complex and diverse real-world scenes,
+significantly contributing to tracking general objects, including pedestrians,
+vehicles, drones, animals, insects, etc.
+<br><br>
+The dataset is designed to expose limitations of existing trackers under
+<b>complex motion patterns</b>, <b>occlusion</b>, and <b>appearance similarity</b>,
+pushing the boundary of multi-object tracking research in unconstrained environments.
+<br><br>
+The leaderboard of existing trackers, as well as training and testing sequences,
+can be found in the
+<a href='https://github.com/holmescao/TOPICTrack' style='color:#0077cc;font-weight:bold;'>code repository</a>
+and the <a href='https://ieeexplore.ieee.org/document/10851814' style='color:#0077cc;font-weight:bold;'>paper</a>."
+
+downloads:
+- label: "Google Drive"
+  note:  "no password"
+  url:   "https://drive.google.com/file/d/1KvqQTZWWhyDsQuEIqQY3XLM_8QlYjDqi/view"
+  icon:  "fab fa-google-drive"
+  style: "google"
+
 news:
 - title: (2025.01) Our paper is online! Please see <a href="https://ieeexplore.ieee.org/document/10851814">IEEE TIP</a>.
 - title: (2024.12) BEE24 is accepted by IEEE TIP! 🎊🎊🎊
@@ -18,13 +46,16 @@ news:
 
 references:
 - title: "@ARTICLE{10851814,
-author={Cao, Xiaoyan and Zheng, Yiyao and Yao, Yao and Qin, Huapeng and Cao, Xiaoyu and Guo, Shihui},
-journal={IEEE Transactions on Image Processing},
-title={TOPIC: A Parallel Association Paradigm for Multi-Object Tracking Under Complex Motions and Diverse Scenes},
-year={2025},
-volume={34},
-pages={743-758},
-doi={10.1109/TIP.2025.3526066}}
-"
+  author  = {Cao, Xiaoyan and Zheng, Yiyao and Yao, Yao and Qin, Huapeng
+             and Cao, Xiaoyu and Guo, Shihui},
+  journal = {IEEE Transactions on Image Processing},
+  title   = {TOPIC: A Parallel Association Paradigm for Multi-Object Tracking
+             Under Complex Motions and Diverse Scenes},
+  year    = {2025},
+  volume  = {34},
+  pages   = {743-758},
+  doi     = {10.1109/TIP.2025.3526066}
+}"
+
 contact_email: caoxiaoyan@stu.pku.edu.cn
 ---

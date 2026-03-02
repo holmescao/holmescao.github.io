@@ -2,7 +2,22 @@
 layout: dataset_larno
 title: LarNO
 image: assets/images/covers/larno2026region.jpg
+image_caption: "Case 1 · Futian District, Shenzhen (region1_20m)"
 image2: assets/images/covers/larno2026ukeatest8a.png
+image2_caption: "Case 2 · UKEA catchment (ukea_8m_5min) – zero-shot test"
+
+badges:
+- {label: "Urban Flood",           style: "blue"}
+- {label: "Neural Operator",       style: "green"}
+- {label: "Zero-shot Super-res",   style: "amber"}
+- {label: "Transfer Learning",     style: "purple"}
+
+stats:
+- {val: "2",   lbl: "Benchmark Cases"}
+- {val: "100", lbl: "Total Events"}
+- {val: "72",  lbl: "Time Steps / Event"}
+- {val: "4×",  lbl: "Zero-shot Super-res"}
+
 about: "This dataset is the official benchmark for <b>LarNO</b>, a memory-efficient,
 discretization-invariant neural operator for real-time urban flood prediction.
 LarNO learns the spatiotemporal mapping from dynamic rainfall and static terrain
@@ -25,8 +40,7 @@ with a 1D–2D coupled scheme. Released at 20 m spatial resolution (400×560 gri
 <br><br>
 Each event is stored as a sub-folder containing <code>rainfall.npy</code> (T×H×W, mm/5 min)
 and <code>h.npy</code> (T×H×W, metres water depth). Shared terrain data
-(<code>dem.npy</code>, H×W) is provided per location. The model takes 13 input channels:
-6 past rainfall fields, 6 cumulative-rainfall fields, and the DEM.
+(<code>dem.npy</code>, H×W) is provided per location.
 <br><br>
 Three training configurations are provided in the codebase:
 <code>ukea_finetune.yaml</code>, <code>ukea_scratch.yaml</code>, and
@@ -35,19 +49,19 @@ Three training configurations are provided in the codebase:
 
 downloads:
 - label: "Baidu Cloud"
-  note: "password: LaNO"
-  url: "https://pan.baidu.com/s/16CnEulG3X4LVgSAMjPvVyg?pwd=LaNO"
-  icon: "fas fa-cloud-download-alt"
+  note:  "password: LaNO"
+  url:   "https://pan.baidu.com/s/16CnEulG3X4LVgSAMjPvVyg?pwd=LaNO"
+  icon:  "fas fa-cloud-download-alt"
   style: "baidu"
 - label: "Google Drive"
-  note: "no password"
-  url: "https://drive.google.com/file/d/1bw97nT9kA1qM8lCuzhzSU3X1KBkJ_Kdw/view?usp=drive_link"
-  icon: "fab fa-google-drive"
+  note:  "no password"
+  url:   "https://drive.google.com/file/d/1bw97nT9kA1qM8lCuzhzSU3X1KBkJ_Kdw/view?usp=drive_link"
+  icon:  "fab fa-google-drive"
   style: "google"
 - label: "figshare"
-  note: "no password"
-  url: "https://figshare.com/articles/dataset/Benchmark_dataset_of_Large-scale_urban_flood_modeling_and_zero-shot_high-resolution_generalization_with_LarNO_/30529031"
-  icon: "ai ai-figshare"
+  note:  "no password"
+  url:   "https://figshare.com/articles/dataset/Benchmark_dataset_of_Large-scale_urban_flood_modeling_and_zero-shot_high-resolution_generalization_with_LarNO_/30529031"
+  icon:  "ai ai-figshare"
   style: "fig"
 
 news:
