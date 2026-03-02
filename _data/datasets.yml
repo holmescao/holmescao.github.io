@@ -1,3 +1,8 @@
+- name: LarNO
+  image: assets\images\covers\urnn-Catchments.gif
+  description: "LarNO is a memory-efficient, discretization-invariant neural operator for real-time urban flood prediction. The benchmark includes two cases: the large-scale Futian District of Shenzhen (80 events, ~100 km²) and a UK Environment Agency small catchment, supporting transfer learning and zero-shot super-resolution."
+  url: /datasets/LarNO
+
 - name: urbanflood24
   image: assets\images\covers\urnn-Catchments.gif
   description: "urbanflood24 is a large-scale spatiotemporal dynamic simulation of rainfall-induced urban flooding. A total of 56 rainfall events, including 20 measured rainfall events and 36 design rainfall events, are used to assess urban flooding induced by various rainfall conditions."
