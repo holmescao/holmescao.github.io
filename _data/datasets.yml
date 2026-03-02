@@ -1,5 +1,5 @@
 - name: LarNO
-  image: assets\images\covers\urnn-Catchments.gif
+  image: assets\images\covers\larno2026region.jpg
   description: "LarNO is a memory-efficient, discretization-invariant neural operator for real-time urban flood prediction. The benchmark includes two cases: the large-scale Futian District of Shenzhen (80 events, ~100 km²) and a UK Environment Agency small catchment, supporting transfer learning and zero-shot super-resolution."
   url: /datasets/LarNO
 

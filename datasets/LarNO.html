@@ -1,7 +1,7 @@
 ---
 layout: dataset
 title: LarNO
-image: assets/images/covers/urnn-Catchments.gif
+image: assets/images/covers/larno2026region.jpg
 about: "This dataset is the official benchmark for LarNO, a memory-efficient,
 discretization-invariant neural operator for real-time urban flood prediction.
 LarNO learns the spatiotemporal mapping from dynamic rainfall and static terrain
@@ -20,6 +20,8 @@ with a 1D–2D coupled scheme. Released at 20 m spatial resolution (400×560 gri
 (~0.4 km²) from a UK Environment Agency study site, used for transfer learning
 (fine-tuning from Futian pre-trained weights) and zero-shot super-resolution
 (train at 8 m, test at 2 m without retraining). 20 events in total, 16 for training, 4 for testing.
+<br>
+<img src='/assets/images/covers/larno2026ukeatest8a.jpg' alt='UKEA 8m test results' style='max-width:100%;margin-top:10px;border-radius:6px;'>
 <br><br>
 Each event is stored as a separate sub-folder containing <code>rainfall.npy</code>
 (shape T×H×W, mm/5min) and <code>h.npy</code> (shape T×H×W, metres water depth).
