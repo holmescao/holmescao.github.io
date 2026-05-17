@@ -1173,7 +1173,6 @@ email: "caoxiaoyan@stu.pku.edu.cn"
 gscholar: https://scholar.google.com/citations?user=ZYkHM6wAAAAJ&hl=zh-CN
 sscholar: X.-Cao/50322492
 github: holmescao
-twitter: caoxiaoyan7
 wechat_qrcode: assets/images/etc/wechat.jpg
 zhihu: mryan-50
 # resume: assets/cv/Resume_RongshengWang.pdf
@@ -1534,13 +1533,6 @@ footer_text: >-
                         {% if site.data.profile.wechat_qrcode %}
                         <a class="pr-3 no-break" data-toggle="modal" data-target="#modal-wechat">
                             <i class="fab fa-weixin"></i> WeChat
-                        </a>
-                        {% endif %}
-
-                        {% if site.data.profile.twitter %}
-                        <a class="pr-3 no-break" target="_blank"
-                            href="https://twitter.com/{{ site.data.profile.twitter }}">
-                            <i class="fab fa-twitter"></i> Twitter
                         </a>
                         {% endif %}
 
